@@ -52,6 +52,8 @@ const SignupPage = () => {
         value={firstName}
         onChangeText={(text) => setFirstName(text)}
         autoCapitalize="none"
+        keyboardType="text"
+
       />
          <TextInput
         style={styles.input}
@@ -59,6 +61,7 @@ const SignupPage = () => {
         value={lastName}
         onChangeText={(text) => setLastName(text)}
         autoCapitalize="none"
+        keyboardType="text"
       />
       <TextInput
         style={styles.input}

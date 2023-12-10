@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import { auth, signInWithEmailAndPassword} from '../firebaseConfig.js'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -39,8 +40,9 @@ const SignIn = () => {
   };
 
   return (
+    <SafeAreaView>
     <View style={styles.container}>
-      <Text style={styles.title}>Signup Page</Text>
+      <Text style={styles.title}>SignIn Page</Text>
       
       <TextInput
         style={styles.input}
@@ -61,6 +63,7 @@ const SignIn = () => {
         <Text style={styles.buttonText}>Signup</Text>
       </TouchableOpacity>
     </View>
+    </SafeAreaView>
   );
 };
 
